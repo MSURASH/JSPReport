@@ -67,8 +67,9 @@ public class PDFtoHTTP extends HttpServlet {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		    document.add(new Paragraph("---------------------------------------------------------PAGE NO::"+document.getPageNumber()+"------------------------------------------------------"));
-		    
+		  //  document.add(new Paragraph("---------------------------------------------------------PAGE NO::"+document.getPageNumber()+"------------------------------------------------------"));
+		    document.add(new Paragraph("---------------------------------------------------------THE END------------------------------------------------------"));
+
 
 		}
 		catch(DocumentException e) 
