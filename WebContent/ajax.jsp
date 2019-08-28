@@ -7,6 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+<form action = "DataServlet" method = "POST">
+
+
+<input type="submit" value="Submit" />
+</form>
+
 <input type="button" onclick="data()" value="call">
 <input hidden type="text" id="myField" value="test" />
 

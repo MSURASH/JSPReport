@@ -81,6 +81,17 @@ public class DataServlet extends HttpServlet {
 		return data;
 
 	}
+		
+		protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+			List<Data> memoryLeak = new ArrayList<>();
+			int counter = 0;
+			while(counter < 500000) {		
+				memoryLeak.add(new Data());
+				counter++;
+			}
+			System.out.println("Done");
+		
+		}
 	
 				private Connection connect() throws SQLException, ClassNotFoundException {
 				
