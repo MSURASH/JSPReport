@@ -8,6 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -83,9 +84,9 @@ public class DataServlet extends HttpServlet {
 	
 				private Connection connect() throws SQLException, ClassNotFoundException {
 				
-				String url = "jdbc:oracle:thin:@localhost:1521/orcl.rev.global.pvt";
+				String url = "jdbc:oracle:thin:@localhost:1521/E1LOCAL";
 				String user = "JDE";
-				String password = "jde01";
+				String password = "jde";
 				Class.forName("oracle.jdbc.OracleDriver");
 				Connection con = DriverManager.getConnection(url,user,password);
 				System.out.println("Database Ready...");
