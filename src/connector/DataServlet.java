@@ -85,8 +85,8 @@ public class DataServlet extends HttpServlet {
 		protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			List<Data> memoryLeak = new ArrayList<>();
 			int counter = 0;
-			while(counter < 500000) {		
-				memoryLeak.add(new Data());
+			while(counter < 5000000) {		
+				//memoryLeak.add(new Data());
 				counter++;
 			}
 			System.out.println("Done");
@@ -95,9 +95,9 @@ public class DataServlet extends HttpServlet {
 	
 				private Connection connect() throws SQLException, ClassNotFoundException {
 				
-				String url = "jdbc:oracle:thin:@localhost:1521/E1LOCAL";
+				String url = "jdbc:oracle:thin:@localhost:1521/orcl.rev.global.pvt";
 				String user = "JDE";
-				String password = "jde";
+				String password = "jde01";
 				Class.forName("oracle.jdbc.OracleDriver");
 				Connection con = DriverManager.getConnection(url,user,password);
 				System.out.println("Database Ready...");
